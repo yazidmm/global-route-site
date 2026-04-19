@@ -1,0 +1,73 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Global Route Logistics</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+ <div class="logo">
+  <a href="/">
+      <img src="/logn.png" alt="Logo" />
+    </div>
+  </a>
+</div>
+  
+
+  <div class="nav-right">
+
+    <!-- MOBILE MENU -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="/" class={Astro.url.pathname === "/" ? "active" : ""}>Home</a>
+      <a href="/about" class={Astro.url.pathname === "/about" ? "active" : ""}>About Us</a>
+      <a href="/services" class={Astro.url.pathname === "/services" ? "active" : ""}>Our Services</a>
+      <a href="/contact" class={Astro.url.pathname === "/contact" ? "active" : ""}>Contact Us</a>
+    </div>
+
+  </div>
+</nav>
+
+<main>
+  <slot />
+</main>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/962791234567" target="_blank" class="whatsapp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+  &copy; Global Route Logistics
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+  }
+
+  // Navbar scroll effect
+  window.addEventListener("scroll", function () {
+    const nav = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>
