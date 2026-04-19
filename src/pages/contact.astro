@@ -1,0 +1,59 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+
+<!-- HERO -->
+<section class="hero small">
+  <h1>Contact Us</h1>
+  <p>We’re here to help your business move forward</p>
+</section>
+
+<!-- CONTENT -->
+<section class="page-content">
+
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Send Message</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+
+      <p>
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Amman, Jordan</span>
+      </p>
+
+      <p>
+        <i class="fas fa-phone"></i>
+        <a href="tel:+962791234567">+962 79 123 4567</a>
+      </p>
+
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:info@globalroute.jo">info@globalroute.jo</a>
+      </p>
+
+      <a href="https://wa.me/962791234567" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+</MainLayout>
